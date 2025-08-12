@@ -22,7 +22,7 @@
 
 .container h1 {
   color: var(--logo-color);
-  font-family: var(--logo-font);
+  font-family: var(--logo-fontT-B);
   font-size: var(--logo-size);
 }
 
@@ -45,12 +45,16 @@
   background-color: var(--cabecalho-color);
 }
 
+.container__botao {
+  display: none;
+}
+
 .container__botao:checked ~ .lista-menu {
   display: block;
 }
 
 .lista-menu__item {
-  padding: 1em;
+  padding: 0.8em;
   text-align: center;
 }
 
@@ -58,7 +62,7 @@
 .lista-menu__categorias {
   color: var(--text-color);
   font-family: var(--font-family);
-  font-size: var(--texto-fontB);
+  font-size: var(--texto-fontM);
   font-weight: bold;
   text-decoration: none;
 }

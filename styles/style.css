@@ -15,9 +15,14 @@
 
   --text-color: #ffffff;
   --font-family: "inter", sans-serif;
-  --texto-fontB: 16px;
-  --texto-fontT: 18px;
-  --texto-font: 16px;
+  --texto-fonth1: 64px;
+  --texto-fonth2: 32px;
+  --texto-fonth3: 28px;
+  --texto-fonth4: 24px;
+  --texto-fontT-B: 20px;
+  --texto-fontM: 16px;
+  --texto-fontOB: 13px;
+  --texto-fontdatas: 11px;
   --border-radius: 5px;
 
   --box-shadow: 0 2px 5px rgba(13, 221, 30, 0.767);
@@ -26,9 +31,27 @@
     390w, 428w, 640w, 750w, 828w, 1080w, 1200w, 1920w
 */
 * {
-  outline: 1px solid rgba(255, 0, 0, 0.555);
+  outline: 1px solid rgba(255, 0, 0, 0.199);
 }
 
 body {
   background-color: var(--background-color);
+  margin: 0.9em;
+}
+
+.container__banner {
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+.container__banner h1 {
+  font-size: var(--texto-fonth1);
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
+}
+.banner__texto {
+  font-size: var(--texto-fontT);
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5em;
 }
