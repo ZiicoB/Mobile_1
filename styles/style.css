@@ -1,21 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("/styles/headers.css");
-
 :root {
   --cabecalho-color: #0000005b;
   --background-color: #000000e3;
 
   --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --cor-categoria: #2ecc71;
+  --secondary-color: rgb(46, 221, 137);
+  --secondary-color-grid: rgb(46, 221, 137);
 
-  --logo-color: rgb(172, 172, 172);
+  --logo-color: rgba(233, 232, 232, 0.911);
   --logo-font: "New Rocker", sans-serif;
   --logo-size: 27px;
   --logo-sizeC: 22px;
 
   --text-color: #ffffff;
-  --font-family: "inter", sans-serif;
+  --font-family: "inter", "inter fallback", sans-serif;
   --texto-fonth1: 64px;
+  --texto-fonth1mb: 48px;
   --texto-fonth2: 32px;
   --texto-fonth3: 28px;
   --texto-fonth4: 24px;
@@ -36,22 +38,87 @@
 
 body {
   background-color: var(--background-color);
-  margin: 0.9em;
 }
 
 .container__banner {
-  font-family: var(--font-family);
   color: var(--text-color);
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/imagens2/fantasy/bau.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 124vh;
+  background-repeat: no-repeat;
 }
-.container__banner h1 {
-  font-size: var(--texto-fonth1);
-  font-weight: bold;
-  text-align: center;
-  padding: 0.5em;
+
+.container__texto_banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 5em;
+  padding: 1.5em;
 }
+
 .banner__texto {
-  font-size: var(--texto-fontT);
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo_topo {
+  font-family: var(--font-family);
+  font-size: var(--texto-fonth1mb);
+  font-weight: 600;
   text-align: center;
-  padding: 0.5em;
+}
+.descricao_top {
+  font-family: var(--font-family);
+  font-size: var(--texto-fontT-B);
+  font-weight: 600;
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+
+.botao__inscricao {
+  color: var(--background-color);
+  font-family: var(--font-family);
+  font-size: var(--texto-fontT-B);
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 3px;
+
+  margin: 3em 0 0 0;
+  padding: 0.7em 1.3em;
+}
+
+.banner__info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin-top: 2.5em;
+  justify-content: center;
+}
+
+.info__geral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.445);
+  backdrop-filter: blur(5px);
+  padding: 1.5em 2em;
+  flex: 1 1 200px; /* permite ajuste automático */
+  max-width: 250px; /* limite do tamanho */
+  text-align: center;
+}
+.info-num {
+  font-size: var(--texto-fonth2);
+  font-weight: bold;
+}
+
+.info-num-itens {
+  font-size: var(--texto-fontM);
+  font-weight: bold;
+  padding: 0.3em 0;
 }

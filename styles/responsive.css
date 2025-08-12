@@ -1,0 +1,78 @@
+@media (max-width: ) {
+  .container__banner {
+    height: 82vh;
+  }
+
+  .container__texto_banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 2.1em;
+    padding: 1.5em;
+  }
+
+  .banner__texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+  }
+
+  .titulo_topo {
+    font-size: var(--texto-fonth1);
+    font-weight: bold;
+    text-align: center;
+  }
+  .descricao_top {
+    font-family: var(--font-family);
+    font-size: var(--texto-fontT);
+    font-weight: bold;
+    text-align: center;
+    margin: 1em 0 0 0;
+  }
+
+  .botao__inscricao {
+    color: var(--background-color);
+    font-family: var(--font-family);
+    font-size: var(--texto-fontT-B);
+    font-weight: bold;
+    background-color: var(--cor-categoria);
+    text-decoration: none;
+    border-radius: 3px;
+
+    margin: 3em 0 0 0;
+    padding: 0.7em 4.3em;
+  }
+
+  .banner__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2.5em;
+    gap: 2em;
+  }
+
+  .info__geral {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.445);
+    backdrop-filter: blur(5px);
+    gap: 1.2em;
+    padding: 2em 2em;
+  }
+  .info-num {
+    display: flex;
+    font-size: var(--texto-fonth2);
+    font-weight: bold;
+    align-items: center;
+  }
+
+  .info-num-itens {
+    font-size: var(--texto-fontM);
+    font-weight: bold;
+    padding: 0.3em 0;
+  }
+}
