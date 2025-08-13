@@ -21,13 +21,11 @@
   }
 
   .titulo_topo {
-    font-size: var(--texto-fonth1);
+    font-size: var(--texto-font-64);
     font-weight: bold;
     text-align: center;
   }
   .descricao_top {
-    font-family: var(--font-family);
-    font-size: var(--texto-fontT);
     font-weight: bold;
     text-align: center;
     margin: 1em 0 0 0;

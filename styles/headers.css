@@ -36,10 +36,12 @@
 .lista-menu {
   display: none;
   position: absolute;
-  top: 101%;
+  top: 100%;
   left: 0;
   width: 100vw;
-  background-color: var(--cabecalho-color);
+
+  background-color: rgba(0, 0, 0, 0.322);
+  backdrop-filter: blur(15px);
 }
 
 .container__botao {
@@ -59,13 +61,13 @@
 .lista-menu__categorias {
   color: var(--text-color);
   font-family: var(--font-family);
-  font-size: var(--texto-fontM);
+  font-size: var(--texto-font-16);
   font-weight: bold;
   text-decoration: none;
 }
 
 .lista-menu__categorias {
-  color: var(--cor-categoria);
+  color: var(--secondary-color);
 }
 
 /* Responsivo do Menu*/
