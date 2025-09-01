@@ -1,0 +1,137 @@
+.carrossel,
+.carrossel_3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #000000 0%, #111111 100%);
+  color: var(--text-color);
+}
+
+.carrossel__titulo {
+  font-family: var(--font-family);
+  font-size: var(--texto-font-24);
+  font-weight: 600;
+  text-align: center;
+  margin: 2em 1em;
+  padding: 0 1em;
+}
+
+.carrossel__image-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+.mini__box:nth-child(5) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.mini__box {
+  background-color: rgb(20, 20, 20);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 150px;
+  height: 160px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mini__box-img {
+  margin-top: 0.6em;
+  width: 90%;
+  display: block;
+  object-fit: cover;
+
+  height: 110px;
+  border-radius: 5px;
+}
+
+.mini__box-texto {
+  font-family: var(--font-family);
+  font-size: var(--texto-font-16);
+  font-weight: bold;
+
+  padding: 0.7em;
+}
+
+.carrossel__image-2 {
+  display: flex;
+  justify-content: center;
+  margin: 4em 0;
+}
+
+.carrossel__image-2 img {
+  width: 43vh;
+  height: 38vh;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/*Carrossel_2*/
+.carrossel_2,
+.carrossel_4 {
+  background: rgb(0, 0, 0);
+  padding: 0 0.3em;
+}
+
+.carrossel_2_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maps__tag {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 1em 1em;
+  gap: 2em;
+  width: auto !important;
+}
+
+.maps__tag-p {
+  font-family: var(--font-family);
+  font-size: var(--texto-font-13);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.swiper {
+  padding: 1em 0.5em 2em 0.5em;
+  width: 90%;
+}
+
+.swiper-wrapper {
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  width: auto !important;
+}
+
+.swiper-slide > :not(:hover) {
+  opacity: 0.4;
+  transform: scale(0.9);
+}
+
+.swiper-slide img {
+  width: 50px;
+  height: 50px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-pagination {
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+}

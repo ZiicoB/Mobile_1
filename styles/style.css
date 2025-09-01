@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @import url("/styles/headers.css");
 @import url(/styles/banner.css);
+@import url("/styles/carrossel.css");
 
 :root {
   --cabecalho-color: #0000005b;
@@ -35,83 +37,10 @@
 /* redimencionamento padão para sites
     390w, 428w, 640w, 750w, 828w, 1080w, 1200w, 1920w
 */
-/* * {
+* {
   outline: 1px solid rgba(255, 0, 0, 0.199);
-}*/
+}
 
 body {
   background-color: var(--background-color);
-}
-
-.carrossel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  /*align-items: center;*/
-  background: linear-gradient(to bottom, #000000 0%, #111111 100%);
-
-  color: var(--text-color);
-}
-
-.carrossel__titulo {
-  font-family: var(--font-family);
-  font-size: var(--texto-font-24);
-  font-weight: 600;
-  text-align: center;
-
-  margin-top: 2em;
-  gap: 2em;
-}
-
-.carrossel__image-1 {
-  display: flex;
-  justify-content: center;
-}
-
-.banner__info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1em;
-  margin-top: 2.5em;
-  justify-content: center;
-}
-
-.info__geral {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: transparent;
-  background-color: rgba(0, 0, 0, 0.445);
-  backdrop-filter: blur(5px);
-  padding: 1.5em 1em;
-  flex: 1 1 200px; /* permite ajuste automático */
-  max-width: 250px; /* limite do tamanho */
-  text-align: center;
-  font-size: var(--texto-font-16);
-  font-family: var(--font-family);
-  font-weight: bold;
-}
-
-.carrossel__image-2 {
-  display: flex;
-  justify-content: center;
-  margin: 2em 0;
-}
-
-.carrossel__2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /*align-items: center;*/
-  background: rgb(0, 0, 0);
-
-  color: var(--text-color);
-}
-
-.maps__tag {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2em;
-  gap: 2em;
 }
