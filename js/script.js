@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const swiperImagens = document.querySelector(".swiper-wrapper");
-  const imgPrincipal = document.querySelector(".carrossel__image-2 img");
+  const imgPrincipal = document.querySelector(".colecao__image-2 img");
 
   // Inicializa o Swiper
   let swiper = new Swiper(".swiper", {

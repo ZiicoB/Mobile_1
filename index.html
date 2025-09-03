@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RPG Maps</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/responsive.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
 
@@ -95,9 +95,9 @@
       </div>
     </section>
 
-    <section class="carrossel">
-      <h2 class="carrossel__titulo">Mapas Epicos para todos cenários possíveis. Perfeito para seu Game!</h2>
-      <div class="carrossel__image-1">
+    <section class="colecao">
+      <h2 class="colecao__titulo">Mapas Epicos para todos cenários possíveis. Perfeito para seu Game!</h2>
+      <div class="colecao__image-1">
         <div class="mini__box">
           <img src="/imagens2/Mapas/Battlemaps_1.png" alt="" class="mini__box-img" />
           <p class="mini__box-texto">Batalhas</p>
@@ -119,59 +119,93 @@
           <p class="mini__box-texto">Cavernas</p>
         </div>
       </div>
-      <div class="carrossel__image-2">
+      <div class="colecao__image-2">
         <img src="/imagens2/Mapas/Battlemaps_1.png" alt="" />
       </div>
     </section>
 
-    <section class="carrossel_2">
-      <div class="carrossel_2_box">
-        <div class="maps__tag">
-          <p class="maps__tag-p">Batalhas</p>
-          <p class="maps__tag-p">Mundiais</p>
-          <p class="maps__tag-p">Cidades</p>
-          <p class="maps__tag-p">Regiões</p>
-          <p class="maps__tag-p tag-down">Cavernas</p>
-        </div>
+    <section class="carrossel_1">
+      <div class="maps__tag">
+        <p class="maps__tag_p">Batalhas</p>
+        <p class="maps__tag_p">Mundiais</p>
+        <p class="maps__tag_p">Cidades</p>
+        <p class="maps__tag_p">Regiões</p>
+        <p class="maps__tag_p tag-down">Cavernas</p>
+      </div>
 
+      <div class="container__carrossel">
         <div class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_1.png" alt="mapa1" class="maps_select-img" /></div>
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_2.png" alt="mapa2" class="maps_select-img" /></div>
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_3.png" alt="mapa3" class="maps_select-img" /></div>
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_4.png" alt="mapa4" class="maps_select-img" /></div>
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_5.png" alt="mapa5" class="maps_select-img" /></div>
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_6.png" alt="mapa6" class="maps_select-img" /></div>
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_7.png" alt="mapa7" class="maps_select-img" /></div>
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_8.png" alt="mapa8" class="maps_select-img" /></div>
-            <div class="swiper-slide"><img src="/imagens2/Mapas/Battlemaps_9.png" alt="mapa9" class="maps_select-img" /></div>
+            <div class="swiper-slide swiper-no-swiping">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_1.png" alt="mapa1" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_2.png" alt="mapa1" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_3.png" alt="mapa1" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_4.png" alt="mapa1" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_5.png" alt="mapa1" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_6.png" alt="mapa1" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_7.png" alt="mapa1" />
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_8.png" alt="mapa1" />
+              </div>
+            </div>
+
+            <div class="swiper-slide swiper-no-swiping">
+              <div class="content">
+                <img src="/imagens2/Mapas/Battlemaps_9.png" alt="mapa1" />
+              </div>
+            </div>
           </div>
 
-          <div class="swiper-pagination"></div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <ul class="control" id="custom-control">
+            <li class="prev">
+              <img src="imagens2/prev.svg" alt="prev" class="arrow" />
+            </li>
+            <li class="next">
+              <img src="imagens2/next.svg" alt="next" class="arrow" />
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const swiper = new Swiper(".swiper", {
-        slidesPerView: 5, // mostra só 1 imagem por vez
-        spaceBetween: 20, // espaço entre imagens
-        loop: true, // loop infinito
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
     <script src="/js/script.js"></script>
+    <script src="/js/script_carrossel.js"></script>
   </body>
 </html>
 
