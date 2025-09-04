@@ -17,6 +17,15 @@
   padding: 0 1em;
 }
 
+.colecao__titulo2 {
+  font-family: var(--font-family);
+  font-size: var(--texto-font-24);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2em;
+  padding: 0 1em;
+}
+
 .colecao__image-1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -57,13 +66,17 @@
   padding: 0.7em;
 }
 
-.colecao__image-2 {
+.colecao__image-2,
+.colecao__image-3,
+.colecao__image-4 {
   display: flex;
   justify-content: center;
   margin: 4em 0;
 }
 
-.colecao__image-2 img {
+.colecao__image-2 img,
+.colecao__image-2 img,
+.colecao__image-3 img {
   width: 43vh;
   height: 38vh;
   display: block;
@@ -72,8 +85,7 @@
 }
 
 /*Carrossel_2*/
-.carrossel_1,
-.carrossel_2 {
+.carrossel_1 {
   background: rgb(0, 0, 0);
   padding: 0 0.5em;
   max-width: 100vw;
@@ -85,8 +97,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   margin: 1em auto; /* auto centraliza no pai */
-  gap: 2em;
+  gap: 1.5em;
   width: fit-content; /* pega só o espaço necessário */
 }
 
@@ -97,24 +110,28 @@
   cursor: pointer;
 }
 
-/* O CARROSSEL DO INFERNO*/
+/* O CARROSSEL*/
 
-.container__carrossel {
+.container__carrossel,
+.container__carrossel2 {
   display: flex;
   margin: 1.5em auto; /* auto centraliza no pai */
   justify-content: center;
   align-items: center;
   width: fit-content;
-  max-width: 100%;
+  max-width: 92%;
   overflow: hidden;
 }
 
-.swiper {
-  max-width: 99%;
+.swiper,
+.swiper1 {
+  max-width: 98.3%;
 }
 
 .swiper-wrapper {
-  max-width: 99%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .swiper-slide {
@@ -155,43 +172,14 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin: 0.5em 0.8em;
 }
 
 .arrow {
   font-size: 1.5rem;
 }
 
-/*
-.swiper {
-  padding: 1em 0.5em 2em 0.5em;
-  width: 90%;
-  max-width: 620px;
-}
-
-.swiper-wrapper {
-  width: 100%;
-  max-width: 620px;
-}
-
-.swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto !important;
-  margin-right: 1.3em;
-}
-*/
-
 .swiper-slide > :not(:hover) {
   opacity: 0.4;
   transform: scale(0.9);
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  display: none;
-}
-
-.swiper-pagination {
-  --swiper-pagination-bullet-inactive-color: #ffffff;
 }

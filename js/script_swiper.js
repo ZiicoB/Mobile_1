@@ -62,12 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const swiperImagens = document.querySelector(".swiper-wrapper");
   const imgPrincipal = document.querySelector(".colecao__image-2 img");
 
-  // Inicializa o Swiper
-  let swiper = new Swiper(".swiper", {
-    pagination: { el: ".swiper-pagination" },
-    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-  });
-
   // Função para carregar imagens no Swiper
   function carregarCategoria(categoria) {
     swiperImagens.innerHTML = ""; // limpa slides
@@ -94,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Eventos nos botões de categoria
-  document.querySelectorAll(".maps__tag-p").forEach((tag) => {
+  document.querySelectorAll(".maps__tag_p").forEach((tag) => {
     tag.addEventListener("click", () => {
       const categoria = tag.innerText.toLowerCase(); // pega o texto do botão
       carregarCategoria(categoria);
