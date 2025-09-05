@@ -1,6 +1,6 @@
 var swiper = new Swiper(".swiper", {
   slidesPerView: 4,
-  spaceBetween: 10,
+  spaceBetween: 11,
   speed: 100,
   loop: true,
   preventClicks: true,
@@ -29,7 +29,7 @@ var swiper = new Swiper(".swiper", {
 /* segundo*/
 
 var swiper1 = new Swiper(".swiper1", {
-  slidesPerView: 4,
+  slidesPerView: 5,
   spaceBetween: 10,
   speed: 100,
   loop: true,

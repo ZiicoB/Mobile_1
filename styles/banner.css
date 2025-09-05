@@ -75,12 +75,11 @@
   flex: 1 1 200px; /* permite ajuste automático */
   max-width: 250px; /* limite do tamanho */
   text-align: center;
-  font-size: var(--texto-font-16);
-  font-family: var(--font-family);
-  font-weight: bold;
 }
 .info-num {
   font-size: var(--texto-font-24);
+  font-family: var(--font-family);
+  font-weight: bold;
   font-weight: bold;
 }
 
@@ -90,7 +89,7 @@
 }
 
 .info-num-itens {
-  font-size: var(--texto-font-13);
+  font-size: var(--texto-font-16);
   font-family: var(--font-family);
   font-weight: bold;
   padding: 0.3em 0;

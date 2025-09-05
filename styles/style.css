@@ -7,7 +7,7 @@
 
 :root {
   --cabecalho-color: #0000005b;
-  --background-color: #000000e3;
+  --background-color: #000000;
 
   --primary-color: #3498db;
   --secondary-color: rgb(46, 221, 137);
@@ -20,6 +20,7 @@
 
   --text-color: #ffffff;
   --font-family: "Inter", "Inter fallback", Sans-serif;
+
   --texto-font-64: 64px;
   --texto-font-48: 48px;
   --texto-font-32: 32px;
