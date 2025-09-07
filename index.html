@@ -95,7 +95,7 @@
       </div>
     </section>
 
-    <section class="colecao">
+    <section class="colecao_1">
       <h2 class="colecao__titulo">Mapas Epicos para todos cenários possíveis. Perfeito para seu Game!</h2>
       <div class="colecao__image-1">
         <div class="mini__box">
@@ -204,85 +204,57 @@
     </section>
 
     <section class="colecao_2">
+      ''
       <h2 class="colecao__titulo2">Nos lhe ajudamos a libere sua criatividade!</h2>
 
-      <div class="glas-box">
-        <img src="/imagens2/Itens.criaturas/Itens_1.png" alt="" />
-
-        <div class="glas-texto">
-          <h2 class="titulo-imagem">itens para sua jornada.</h2>
-          <p class="colecao__img-text">
-            Itens essenciais para sua mesa de RPG, ideais para enriquecer suas narrativas e tornar cada sessão ainda mais imersiva.
-          </p>
-        </div>
-      </div>
-
-      <div class="container__carrossel2">
-        <div class="swiper1">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-no-swiping">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_1.png" alt="mapa1" />
+      <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked />
+        <input type="radio" name="slider" id="slide2" />
+        <input type="radio" name="slider" id="slide3" />
+        <input type="radio" name="slider" id="slide4" />
+        <div id="slides">
+          <div id="overflow">
+            <div class="inner">
+              <div class="slide">
+                <div class="slide-content">
+                  <img src="/imagens2/Itens.criaturas/Itens_1.png" alt="" />
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <img src="/imagens2/Itens.criaturas/Itens_2.png" alt="" />
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <img src="/imagens2/Itens.criaturas/Itens_3.png" alt="" />
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <img src="/imagens2/Itens.criaturas/Itens_4.png" alt="" />
+                </div>
               </div>
             </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_2.png" alt="mapa2" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_3.png" alt="Item3" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_4.png" alt="Item4" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_5.png" alt="Item5" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_6.png" alt="Item6" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_7.png" alt="Item7" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_8.png" alt="Item8" />
-              </div>
-            </div>
-
-            <div class="swiper-slide swiper-no-swiping">
-              <div class="content">
-                <img src="/imagens2/Itens.criaturas/Itens_9.png" alt="Item9" />
-              </div>
+            <div class="glas-texto">
+              <h2 class="titulo-imagem">itens para sua jornada.</h2>
+              <p class="colecao__img-text">
+                Itens essenciais para sua mesa de RPG, ideais para enriquecer suas narrativas e tornar cada sessão ainda mais imersiva.
+              </p>
             </div>
           </div>
-
-          <ul class="control" id="custom-control">
-            <li class="prev2">
-              <img src="imagens2/prev.svg" alt="prev2" class="arrow" />
-            </li>
-            <li class="next2">
-              <img src="imagens2/next.svg" alt="next2" class="arrow" />
-            </li>
-          </ul>
+        </div>
+        <div id="controls">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
         </div>
       </div>
 
@@ -352,6 +324,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/js/script_swiper.js"></script>
     <script src="/js/script_carrossel.js"></script>
+    <script src="/js/script_carrossel2.js"></script>
   </body>
 </html>
 

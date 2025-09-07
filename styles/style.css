@@ -3,7 +3,8 @@
 
 @import url("/styles/headers.css");
 @import url(/styles/banner.css);
-@import url("/styles/carrossel.css");
+@import url("/styles/colecao1.css");
+@import url("/styles/colecao2.css");
 
 :root {
   --cabecalho-color: #0000005b;
