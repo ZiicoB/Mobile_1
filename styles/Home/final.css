@@ -1,0 +1,125 @@
+.final {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--text-color);
+
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 1%, rgba(0, 0, 0, 0.575)), url("/imagens2/fantasy/bau.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.container__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  text-align: left;
+  gap: 2.5em;
+  margin: 3em 1em;
+}
+
+.box_comantario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  text-align: left;
+
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.192);
+  box-sizing: border-box;
+
+  width: 320px;
+  height: auto;
+  padding: 1em;
+  gap: 1em;
+  font-family: var(--font-family);
+  font-size: var(--texto-font-18);
+  line-height: 24px;
+}
+
+.icon_comentario {
+  width: 10%;
+}
+.box_comantario p {
+  width: 260px;
+}
+
+.usuario {
+  color: rgb(46, 221, 137);
+}
+
+.box_accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  text-align: left;
+
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.192);
+  box-sizing: border-box;
+
+  width: 320px;
+  height: auto;
+  padding: 1em;
+  margin: 6em 1em;
+  gap: 1em;
+  font-family: var(--font-family);
+  font-size: var(--texto-font-18);
+  line-height: 24px;
+}
+
+.container_questions {
+  max-width: 320px;
+  margin: 1em 0;
+  padding-bottom: 0.6em;
+  border-bottom: 2px solid white;
+  cursor: pointer;
+}
+
+.container_questions p {
+  font-family: var(--font-family);
+  font-size: var(--texto-font-20);
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.questions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resposta {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.resposta p {
+  padding-top: 1.5em;
+  line-height: 1.6;
+  font-family: var(--font-family);
+  font-size: var(--texto-font-16);
+  font-weight: 400;
+}
+
+.container_questions .resposta {
+  display: none;
+}
+.container_questions.active .resposta {
+  display: block;
+  max-height: 300px;
+}
