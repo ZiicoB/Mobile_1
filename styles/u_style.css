@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import url("/styles/Home/headers.css");
+@import url(/styles/home/banner.css);
+@import url("/styles/Home/colecao1.css");
+@import url("/styles/Home/colecao2.css");
+@import url("/styles/Home/colecao2.css");
+@import url("/styles/Home/final.css");
+@import url("/styles/Home/footer.css");
+
+:root {
+  --cabecalho-color: #0000005b;
+  --background-color: #000000;
+
+  --primary-color: #3498db;
+  --secondary-color: rgb(46, 221, 137);
+  --secondary-color-hover: rgb(84, 245, 167);
+
+  --logo-color: rgba(233, 232, 232, 0.911);
+  --logo-font: "New Rocker", sans-serif;
+  --logo-size: 27px;
+  --logo-sizeC: 22px;
+
+  --text-color: #ffffff;
+  --font-family: "Inter", "Inter fallback", Sans-serif;
+
+  --texto-font-64: 64px;
+  --texto-font-48: 48px;
+  --texto-font-32: 32px;
+  --texto-font-28: 28px;
+  --texto-font-24: 24px;
+  --texto-font-20: 20px;
+  --texto-font-18: 18px;
+  --texto-font-16: 16px;
+  --texto-font-14: 14px;
+  --texto-font-13: 13px;
+  --texto-font-11: 11px;
+  --border-font-5: 5px;
+
+  --box-shadow: 0 2px 5px rgba(13, 221, 30, 0.767);
+}
+/* redimencionamento padão para sites
+    390w, 428w, 640w, 750w, 828w, 1080w, 1200w, 1920w
+*/
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.199);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--background-color);
+}

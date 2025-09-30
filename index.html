@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/responsive.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/h_style.css" />
   </head>
 
   <body>
@@ -18,9 +18,9 @@
           <h1>Mundo RPG</h1>
         </div>
         <div class="container">
-          <a href="#"><img src="/imagens2/Favoritos.svg" alt="favoritos" class="cont__imagem_cab" /></a>
-          <a href="#"><img src="/imagens2/Compras.svg" alt="comprar" class="cont__imagem_cab" /></a>
           <a href="#"><img src="/imagens2/Usuário.svg" alt="usuario" class="cont__imagem_cab" /></a>
+          <a href="#"><img src="/imagens2/Favoritos.svg" alt="favoritos" class="cont__imagem_cab" /></a>
+          <a href="#osplanos"><img src="/imagens2/Compras.svg" alt="comprar" class="cont__imagem_cab" /></a>
 
           <input type="checkbox" id="menu" class="container__botao" />
           <label for="menu">
@@ -323,7 +323,7 @@
         </div>
       </div>
 
-      <div class="box_accordion">
+      <div id="faq" class="box_accordion">
         <h2 class="titlo_comentario">Perguntas</h2>
 
         <div class="container_questions">
@@ -387,7 +387,7 @@
         <p class="more_faq">Mais Perguntas. (FAQ)</p>
       </div>
 
-      <div class="box_planos">
+      <div id="osplanos" class="box_planos">
         <h2 class="titlo_comentario">Comece com nosso plano e suba para nível Pro.</h2>
         <div class="escolher-mes-ano">
           <p class="mes">Mensal</p>
@@ -430,7 +430,22 @@
       </div>
     </section>
 
-    <footer></footer>
+    <footer class="rodape">
+      <div class="redes__sociais">
+        <a href="https://web.facebook.com/" target="_blank"><img src="/imagens2/Facebook.svg" alt="Facebook" class="social" /></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="/imagens2/Instagram.svg" alt="Instagram" class="social" /></a>
+        <a href="https://x.com/" target="_blank"><img src="/imagens2/Twitter.svg" alt="X" class="social" /></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="/imagens2/Youtube.svg" alt="Youtube" class="social" /></a>
+        <a href="https://discord.com/" target="_blank"><img src="/imagens2/Discord.svg" alt="Discord" class="social" /></a>
+      </div>
+      <div class="more__info">
+        <a href="#faq">FAQ</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">privacidade</a>
+        <a href="#">Cookies</a>
+        <a href="contato.html" target="_blank">Contato*</a>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/js/script_swiper.js"></script>
