@@ -1,4 +1,4 @@
-.container__banner {
+.banner {
   color: var(--text-color);
   background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/imagens2/fantasy/bau.png");
   background-size: cover;

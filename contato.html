@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG Maps</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/responsive.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+
+  <body>
+    <section class="container__topo">
+      <header class="cabecalho">
+        <div class="container__logo">
+          <a href="index.html">
+            <img src="/imagens2/logo.svg" alt="logo" class="logo" />
+            <h1>Mundo RPG</h1>
+          </a>
+        </div>
+        <div class="container">
+          <a href="#"><img src="/imagens2/Usuário.svg" alt="usuario" class="cont__imagem_cab" /></a>
+          <a href="#"><img src="/imagens2/Favoritos.svg" alt="favoritos" class="cont__imagem_cab" /></a>
+          <a href="#osplanos"><img src="/imagens2/Compras.svg" alt="comprar" class="cont__imagem_cab" /></a>
+
+          <input type="checkbox" id="menu" class="container__botao" />
+          <label for="menu">
+            <span class="cabecalho_menu-hamburguer"> </span>
+          </label>
+          <ul class="lista-menu">
+            <li class="lista-menu__item"><a href="#" class="lista-menu__links">PERFIL</a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__links">FAVORITOS</a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__links">NOSSOS PLANOS</a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__categorias">=== CATEGORIAS RPG ===</a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__links">ITENS</a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__links">MAPAS</a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__links">LIVROS</a></li>
+            <li class="lista-menu__item"><a href="#" class="lista-menu__links">CRIATURAS</a></li>
+          </ul>
+        </div>
+      </header>
+    </section>
+
+    <section class="container__contato">
+      <h2>Formulário de Contato</h2>
+
+      <form class="formulario" id="forms">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="assunto">Assunto:</label>
+        <input type="text" id="assunto" name="assunto" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <p id="mensagemStatus"></p>
+    </section>
+
+    <footer class="rodape">
+      <div class="redes__sociais">
+        <a href="https://web.facebook.com/" target="_blank"><img src="/imagens2/Facebook.svg" alt="Facebook" class="social" /></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="/imagens2/Instagram.svg" alt="Instagram" class="social" /></a>
+        <a href="https://x.com/" target="_blank"><img src="/imagens2/Twitter.svg" alt="X" class="social" /></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="/imagens2/Youtube.svg" alt="Youtube" class="social" /></a>
+        <a href="https://discord.com/" target="_blank"><img src="/imagens2/Discord.svg" alt="Discord" class="social" /></a>
+      </div>
+      <div class="more__info">
+        <a href="#faq">FAQ</a>
+        <a href="#">Termos de uso</a>
+        <a href="#">privacidade</a>
+        <a href="#">Cookies</a>
+        <a href="contato.html">Contato*</a>
+      </div>
+    </footer>
+
+    <script src="/js/contato.js"></script>
+  </body>
+</html>
+
+<!--
+  <body>
+    <header> 
+        <nav></nav> 
+    </header>
+    <main>
+        <section> </section>
+        <div> </div>
+        <article> </article> 
+        <aside> </aside>
+    </main>
+    <footer>   
+    </footer>
+  </body>
+    -->

@@ -2,34 +2,63 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 0.4em 1.2em 0.2em 1.2em;
 
-  padding: 1em 20.5em 0.5em 20.5em;
   position: relative;
 }
 
-.container {
+.container__logo {
   display: flex;
+
+  align-items: center;
+  gap: 0.5em;
+}
+
+.container__logo a {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.5em;
 }
 
 .logo {
-  height: 40px;
+  height: 32px;
 }
 
-.container h1 {
+.container__logo h1 {
   color: var(--logo-color);
   font-family: var(--logo-font);
-  font-size: var(--logo-size);
+  font-size: var(--texto-font-20);
+}
+
+.opcoes {
+  display: none;
+}
+.opcoes__item {
+  padding: 0 2em;
+  text-transform: uppercase;
+}
+.opcoes__link {
+  font-family: var(--font-family);
+  font-size: var(--texto-font-16);
+  text-decoration: none;
+  color: white;
 }
 
 .cont__imagem_cab {
   height: 38px;
-  gap: 10px;
+  display: none;
 }
 
 .cabecalho_menu-hamburguer {
-  display: none;
+  display: inline-block;
+
+  background-image: url("/imagens2/Menu2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 32px;
+  height: 24px;
 }
 
 /* Menu mobile*/
@@ -71,29 +100,41 @@
 }
 
 /* Responsivo do Menu*/
-@media (max-width: 450px) {
+@media screen and (min-width: 1024px) {
   .cabecalho {
     justify-content: space-between;
-    padding: 0.4em 1.2em 0.2em 1.2em;
+    padding: 1em 2em 0.5em 2em;
   }
   .logo {
-    height: 32px;
+    height: 40px;
   }
-  .container h1 {
-    font-size: var(--logo-sizeC);
-  }
-
-  .cabecalho_menu-hamburguer {
-    display: inline-block;
-
-    background-image: url("/imagens2/Menu2.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 32px;
-    height: 24px;
+  .container__logo h1 {
+    font-size: var(--texto-font-28);
   }
 
+  .opcoes {
+    display: flex;
+    gap: 2em;
+  }
+  .opcoes__item {
+    padding: 0 1em;
+    text-transform: uppercase;
+  }
+  .opcoes__link {
+    font-family: var(--font-family);
+    font-size: var(--texto-font-16);
+    text-decoration: none;
+    color: white;
+  }
+
+  .cont__imagem {
+    display: flex;
+    gap: 0.5em;
+  }
   .cont__imagem_cab {
+    display: inline-block;
+  }
+  .cabecalho_menu-hamburguer {
     display: none;
   }
 }

@@ -1,0 +1,79 @@
+.container__contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centraliza horizontalmente */
+  min-height: 95vh; /* Centraliza verticalmente */
+  background-color: #0707079c;
+  color: var(--text-color);
+}
+
+.container__contato h2 {
+  text-align: center;
+  font-size: var(--texto-font-48);
+  font-family: var(--font-family);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.formulario {
+  border: solid 1px green;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: var(--texto-font-16);
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+textarea {
+  height: 150px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 50%;
+  font-size: 16px;
+  margin: auto;
+  display: block;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#mensagemStatus {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+@media screen and (min-width: 360px) {
+  .final {
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding-bottom: 2em; /* Espaço extra se necessário */
+  }
+}

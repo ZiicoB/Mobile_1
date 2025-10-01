@@ -8,6 +8,8 @@
 @import url("/styles/Home/colecao2.css");
 @import url("/styles/Home/final.css");
 @import url("/styles/Home/footer.css");
+/* Contato*/
+@import url("/styles/Usuario/contato.css");
 
 :root {
   --cabecalho-color: #0000005b;
@@ -19,8 +21,6 @@
 
   --logo-color: rgba(233, 232, 232, 0.911);
   --logo-font: "New Rocker", sans-serif;
-  --logo-size: 27px;
-  --logo-sizeC: 22px;
 
   --text-color: #ffffff;
   --font-family: "Inter", "Inter fallback", Sans-serif;
