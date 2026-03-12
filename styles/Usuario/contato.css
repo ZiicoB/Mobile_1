@@ -1,79 +1,175 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTAINER PRINCIPAL */
 .container__contato {
+  min-height: 90svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #162936;
+}
+
+/* CARD */
+.card__contato {
+  display: flex;
+  width: 900px;
+  max-width: 90%;
+  background: #c0c7d1;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.322);
+}
+
+/* PAINEL ESQUERDO */
+.painel__esquerdo {
+  width: 45%;
+  background: #27e9b5;
+  color: #000000;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Centraliza horizontalmente */
-  min-height: 95vh; /* Centraliza verticalmente */
-  background-color: #0707079c;
-  color: var(--text-color);
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
 }
 
-.container__contato h2 {
+.painel__esquerdo h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.painel__esquerdo p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.btn__outline {
+  background: transparent;
+  border: 3px solid #e6ecf5;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* PAINEL DIREITO */
+.painel__direito {
+  width: 50%;
+  padding: 3rem;
   text-align: center;
-  font-size: var(--texto-font-48);
-  font-family: var(--font-family);
-  font-weight: 600;
-  margin-bottom: 0.5em;
 }
 
-.formulario {
-  border: solid 1px green;
-  width: 350px;
+.painel__direito h2 {
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.painel__direito form {
   display: flex;
   flex-direction: column;
 }
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: var(--texto-font-16);
-  font-family: var(--font-family);
-  font-weight: 400;
-}
 
-input[type="text"],
-input[type="email"],
-textarea {
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 20px;
+.painel__direito input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+  outline: none;
+}
+.box-datatel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: start;
 }
 
-textarea {
-  height: 150px;
-}
-
-button {
-  background-color: #28a745;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 50%;
-  font-size: 16px;
-  margin: auto;
-  display: block;
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-#mensagemStatus {
+.box_upload {
+  gap: 5px;
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
   text-align: center;
-  margin-top: 20px;
-  color: #333;
 }
 
-@media screen and (min-width: 360px) {
-  .final {
-    background-size: contain;
-    background-position: top center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    padding-bottom: 2em; /* Espaço extra se necessário */
-  }
+/* LINKS */
+.link__forgot {
+  font-size: 13px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/*Box de texto*/
+.texto__container {
+  position: relative;
+  width: 100%;
+}
+
+.texto__container textarea {
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 10px;
+  resize: vertical;
+  min-height: 120px;
+  max-height: 300px;
+}
+
+.texto__container span {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Botão enviar */
+.btn__submit {
+  padding: 12px;
+  background: #27e9b5;
+  border: none;
+  color: #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* TEXTO */
+.texto__social {
+  margin: 20px 0;
+  font-size: 13px;
+  color: #000000;
+}
+
+/* SOCIAL */
+.social__icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social__icons span {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
 }

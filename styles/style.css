@@ -12,12 +12,11 @@
 @import url("/styles/Usuario/contato.css");
 
 :root {
-  --cabecalho-color: #0000005b;
-  --background-color: #000000;
+  --background-color: #051824;
 
   --primary-color: #3498db;
-  --secondary-color: rgb(46, 221, 137);
-  --secondary-color-hover: rgb(84, 245, 167);
+  --secondary-color: #32e08f;
+  --secondary-color-hover: #32e0c4;
 
   --logo-color: rgba(233, 232, 232, 0.911);
   --logo-font: "New Rocker", sans-serif;

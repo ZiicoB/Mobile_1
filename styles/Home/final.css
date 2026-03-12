@@ -6,7 +6,9 @@
   text-align: center;
   color: var(--text-color);
 
-  background: linear-gradient(to bottom, rgb(0, 0, 0) 5%, rgba(0, 0, 0, 0.404) 80%, rgb(0, 0, 0)) 15%, url("/imagens2/fantasy/coruja.png");
+  background:
+    linear-gradient(to bottom, #000000 5%, rgba(0, 0, 0, 0.404) 80%, rgb(0, 0, 0)) 15%,
+    url("/imagens2/fantasy/coruja.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
