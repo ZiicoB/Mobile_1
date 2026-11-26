@@ -1,25 +1,24 @@
 const telInput = document.getElementById("telnumber");
 
-telInput.addEventListener("input", () => {
-  let value = telInput.value.replace(/\D/g, "");
+if (telInput) {
+  telInput.addEventListener("input", () => {
+    const digits = telInput.value.replace(/\D/g, "").slice(0, 11);
 
-  // limita a 11 números
-  if (value.length > 11) value = value.slice(0, 11);
+    let formatted = digits;
+    if (digits.length > 7) {
+      formatted = `(${digits.slice(0, 2)}) ${digits.slice(2, 3)}-${digits.slice(3, 7)}-${digits.slice(7)}`;
+    } else if (digits.length > 3) {
+      formatted = `(${digits.slice(0, 2)}) ${digits.slice(2, 3)}-${digits.slice(3)}`;
+    } else if (digits.length > 2) {
+      formatted = `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    }
 
-  if (value.length >= 2) {
-    value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
-  }
-  if (value.length >= 4) {
-    value = `${value.slice(0, 6)}-${value.slice(6)}`;
-  }
-  if (value.length >= 8) {
-    value = `${value.slice(0, 11)}-${value.slice(11)}`;
-  }
-
-  telInput.value = value;
-});
+    telInput.value = formatted;
+  });
+}
 
 function validarTelefone() {
+  if (!telInput) return true;
   const regex = /^\(\d{2}\) \d-\d{4}-\d{4}$/;
   return regex.test(telInput.value);
 }

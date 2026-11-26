@@ -2,15 +2,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.4em 1.2em 0.2em 1.2em;
-
-  position: relative;
+  padding: 0.7em 1.25em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(5, 24, 36, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
 }
 
 .container__logo {
   display: flex;
-
   align-items: center;
   gap: 0.5em;
 }
@@ -19,49 +24,97 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.6em;
+  text-decoration: none;
 }
 
 .logo {
-  height: 32px;
+  height: 34px;
+  width: auto;
 }
 
 .container__logo h1 {
   color: var(--logo-color);
   font-family: var(--logo-font);
-  font-size: var(--texto-font-20);
+  font-size: var(--texto-font-24);
+  letter-spacing: 0.5px;
 }
 
 .opcoes {
   display: none;
 }
+
 .opcoes__item {
-  padding: 0 2em;
+  padding: 0 0.65em;
   text-transform: uppercase;
 }
+
 .opcoes__link {
   font-family: var(--font-family);
-  font-size: var(--texto-font-16);
+  font-size: var(--texto-font-14);
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
+  transition: color 0.2s ease;
+}
+
+.opcoes__link:hover,
+.opcoes__link--ativo {
+  color: var(--secondary-color);
+}
+
+.cont__imagem {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.header-icon-action {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.header-icon-action:hover {
+  transform: translateY(-1px);
+  background: rgba(50, 224, 143, 0.12);
+  border-color: rgba(50, 224, 143, 0.45);
+}
+
+.header-icon-action.btn-favoritos {
+  display: none;
+  cursor: default;
 }
 
 .cont__imagem_cab {
-  height: 38px;
-  display: none;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
 }
 
 .cabecalho_menu-hamburguer {
   display: inline-block;
-
-  background-image: url("/imagens2/Menu2.svg");
+  background-image: url("../../imagens2/Menu2.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
   width: 32px;
   height: 24px;
+  cursor: pointer;
 }
 
-/* Menu mobile*/
+/* Menu mobile */
 .lista-menu {
   display: none;
   top: 100%;
@@ -69,9 +122,11 @@
   width: 100%;
   z-index: 9999;
   position: absolute;
-
-  background-color: #22283144;
-  backdrop-filter: blur(15px);
+  padding: 0.6em 0;
+  background-color: rgba(8, 22, 34, 0.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55);
 }
 
 .container__botao {
@@ -83,7 +138,7 @@
 }
 
 .lista-menu__item {
-  padding: 0.8em;
+  padding: 0.8em 1em;
   text-align: center;
 }
 
@@ -92,51 +147,226 @@
   color: var(--text-color);
   font-family: var(--font-family);
   font-size: var(--texto-font-16);
-  font-weight: bold;
+  font-weight: 700;
   text-decoration: none;
+  display: inline-block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lista-menu__links:hover {
+  color: var(--secondary-color);
 }
 
 .lista-menu__categorias {
   color: var(--secondary-color);
+  cursor: default;
 }
 
-/* Responsivo do Menu*/
+/* Modal de Login */
+.login-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25em;
+  background: rgba(2, 10, 18, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.login-modal[hidden] {
+  display: none;
+}
+
+.login-modal__card {
+  position: relative;
+  width: min(92vw, 400px);
+  padding: 2em 1.75em;
+  border-radius: 14px;
+  background: #0b1b28;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.65);
+  color: var(--text-color);
+}
+
+.login-modal__fechar {
+  position: absolute;
+  top: 0.75em;
+  right: 0.85em;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.login-modal__fechar:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: var(--secondary-color);
+}
+
+.login-modal__titulo {
+  font-size: var(--texto-font-24);
+  font-weight: 700;
+  margin-bottom: 0.35em;
+  text-align: center;
+}
+
+.login-modal__subtitulo {
+  font-size: var(--texto-font-13);
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.login-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.login-modal__campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  font-size: var(--texto-font-13);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.login-modal__campo input {
+  width: 100%;
+  padding: 0.8em 0.95em;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--texto-font-14);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-modal__campo input:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(50, 224, 143, 0.18);
+}
+
+.login-modal__senha-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-modal__senha-wrapper input {
+  padding-right: 4.8em;
+}
+
+.login-modal__mostrar-senha {
+  position: absolute;
+  right: 0.6em;
+  padding: 0.35em 0.6em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.login-modal__mostrar-senha:hover {
+  background: rgba(50, 224, 143, 0.18);
+  color: var(--secondary-color);
+}
+
+.login-modal__salvar {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  font-size: var(--texto-font-13);
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.login-modal__salvar input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.login-modal__submit {
+  margin-top: 0.4em;
+  padding: 0.85em;
+  border: none;
+  border-radius: 8px;
+  background: var(--secondary-color);
+  color: var(--background-color);
+  font-family: var(--font-family);
+  font-size: var(--texto-font-16);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.login-modal__submit:hover {
+  background: var(--secondary-color-hover);
+  transform: translateY(-1px);
+}
+
+/* Responsivo do Menu */
 @media screen and (min-width: 1024px) {
   .cabecalho {
     justify-content: space-between;
-    padding: 1em 2em 0.5em 2em;
+    padding: 0.85em 3em;
   }
+
   .logo {
     height: 40px;
   }
+
   .container__logo h1 {
     font-size: var(--texto-font-28);
   }
 
   .opcoes {
     display: flex;
-    gap: 2em;
-  }
-  .opcoes__item {
-    padding: 0 1em;
-    text-transform: uppercase;
-  }
-  .opcoes__link {
-    font-family: var(--font-family);
-    font-size: var(--texto-font-16);
-    text-decoration: none;
-    color: white;
+    align-items: center;
+    gap: 1.5em;
   }
 
   .cont__imagem {
     display: flex;
-    gap: 0.5em;
+    gap: 0.65em;
     position: relative;
   }
-  .cont__imagem_cab {
-    display: inline-block;
+
+  .header-icon-action {
+    display: inline-flex;
   }
+
+  body.usuario-logado .header-icon-action.btn-favoritos {
+    display: inline-flex;
+  }
+
   .cabecalho_menu-hamburguer {
+    display: none;
+  }
+
+  .container__botao:checked ~ .lista-menu {
     display: none;
   }
 }

@@ -1,15 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-@import url("/styles/Home/headers.css");
-@import url(/styles/home/banner.css);
-@import url("/styles/Home/colecao1.css");
-@import url("/styles/Home/colecao2.css");
-@import url("/styles/Home/colecao2.css");
-@import url("/styles/Home/final.css");
-@import url("/styles/Home/footer.css");
-/* Contato*/
-@import url("/styles/Usuario/contato.css");
+@import url("./Home/headers.css");
+@import url("./Home/banner.css");
+@import url("./Home/colecao1.css");
+@import url("./Home/colecao2.css");
+@import url("./Home/final.css");
+@import url("./Home/footer.css");
+/* Contato */
+@import url("./Usuario/contato.css");
 
 :root {
   --background-color: #051824;
@@ -18,11 +17,12 @@
   --secondary-color: #32e08f;
   --secondary-color-hover: #32e0c4;
 
-  --logo-color: rgba(233, 232, 232, 0.911);
+  --logo-color: rgba(233, 232, 232, 0.95);
   --logo-font: "New Rocker", sans-serif;
 
   --text-color: #ffffff;
-  --font-family: "Inter", "Inter fallback", Sans-serif;
+  --text-muted: #c2ced9;
+  --font-family: "Inter", "Inter fallback", sans-serif;
 
   --texto-font-64: 64px;
   --texto-font-48: 48px;
@@ -39,17 +39,23 @@
 
   --box-shadow: 0 2px 5px rgba(13, 221, 30, 0.767);
 }
-/* redimencionamento padão para sites
-    390w, 428w, 640w, 750w, 828w, 1080w, 1200w, 1920w
-*/
-* {
-  outline: 1px solid rgba(255, 0, 0, 0.199);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
+  min-height: 100vh;
   background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  overflow-x: clip;
 }

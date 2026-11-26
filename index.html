@@ -1,219 +1,170 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RPG Maps</title>
+    <title>Mundo RPG — Mapas, Itens e Criaturas</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/responsive.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
-    <section class="container__topo banner">
-      <header class="cabecalho">
-        <div class="container__logo">
-          <a href="index.html">
-            <img src="/imagens2/logo.svg" alt="logo" class="logo" />
-            <h1>Mundo RPG</h1>
-          </a>
-        </div>
-        <ul class="opcoes">
-          <li class="opcoes__item"><a href="#" class="opcoes__link">Itens</a></li>
-          <li class="opcoes__item"><a href="#" class="opcoes__link">Mapas</a></li>
-          <li class="opcoes__item"><a href="#" class="opcoes__link">Livros</a></li>
-          <li class="opcoes__item"><a href="#" class="opcoes__link">Criaturas</a></li>
+    <header class="cabecalho">
+      <div class="container__logo">
+        <a href="index.html">
+          <img src="imagens2/logo.svg" alt="Logo Mundo RPG" class="logo" />
+          <h1>Mundo RPG</h1>
+        </a>
+      </div>
+
+      <ul class="opcoes">
+        <li class="opcoes__item"><a href="#mapas" class="opcoes__link">Mapas</a></li>
+        <li class="opcoes__item"><a href="#itens" class="opcoes__link" data-nav-colecao="itens">Itens</a></li>
+        <li class="opcoes__item"><a href="#osplanos" class="opcoes__link">Planos</a></li>
+        <li class="opcoes__item"><a href="#itens" class="opcoes__link" data-nav-colecao="criaturas">Criaturas</a></li>
+        <li class="opcoes__item"><a href="contato.html" class="opcoes__link">Contato</a></li>
+      </ul>
+
+      <div class="cont__imagem">
+        <button type="button" id="btn-abrir-login" class="header-icon-action btn-login-trigger" aria-label="Fazer login" title="Fazer login">
+          <img src="imagens2/Usuário.svg" alt="Login" class="cont__imagem_cab" />
+        </button>
+        <button type="button" id="btn-favoritos" class="header-icon-action btn-favoritos" aria-label="Favoritos" title="Favoritos">
+          <img src="imagens2/Favoritos.svg" alt="Favoritos" class="cont__imagem_cab" />
+        </button>
+        <a href="#osplanos" class="header-icon-action" aria-label="Nossos planos" title="Nossos planos">
+          <img src="imagens2/Compras.svg" alt="Planos" class="cont__imagem_cab" />
+        </a>
+
+        <input type="checkbox" id="menu" class="container__botao" />
+        <label for="menu" aria-label="Abrir menu">
+          <span class="cabecalho_menu-hamburguer"></span>
+        </label>
+        <ul class="lista-menu">
+          <li class="lista-menu__item">
+            <button type="button" class="lista-menu__links lista-menu__btn-login">LOGIN</button>
+          </li>
+          <li class="lista-menu__item"><a href="contato.html" class="lista-menu__links">CONTATO</a></li>
+          <li class="lista-menu__item"><a href="#osplanos" class="lista-menu__links">NOSSOS PLANOS</a></li>
+          <li class="lista-menu__item"><span class="lista-menu__categorias">| CATEGORIAS RPG |</span></li>
+          <li class="lista-menu__item"><a href="#mapas" class="lista-menu__links">MAPAS</a></li>
+          <li class="lista-menu__item"><a href="#itens" class="lista-menu__links" data-nav-colecao="itens">ITENS</a></li>
+          <li class="lista-menu__item"><a href="#itens" class="lista-menu__links" data-nav-colecao="criaturas">CRIATURAS</a></li>
+          <li class="lista-menu__item"><a href="#faq" class="lista-menu__links">FAQ</a></li>
         </ul>
+      </div>
+    </header>
 
-        <div class="cont__imagem">
-          <a href="#"><img src="/imagens2/Usuário.svg" alt="usuario" class="cont__imagem_cab" /></a>
-          <a href="#"><img src="/imagens2/Favoritos.svg" alt="favoritos" class="cont__imagem_cab" /></a>
-          <a href="#osplanos"><img src="/imagens2/Compras.svg" alt="comprar" class="cont__imagem_cab" /></a>
-
-          <input type="checkbox" id="menu" class="container__botao" />
-          <label for="menu">
-            <span class="cabecalho_menu-hamburguer"> </span>
-          </label>
-          <ul class="lista-menu">
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">PERFIL</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">FAVORITOS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">NOSSOS PLANOS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__categorias">| CATEGORIAS RPG |</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">ITENS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">MAPAS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">LIVROS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">CRIATURAS</a></li>
-          </ul>
-        </div>
-      </header>
-
+    <section class="container__topo banner">
       <div class="container__texto_banner">
         <div class="banner__texto">
-          <h1 class="titulo_topo">Crie mundos incríveis.</h1>
+          <h2 class="titulo_topo">Crie mundos incríveis.</h2>
           <p class="descricao_top">Descubra a plataforma para criação de mesas de RPG mais poderosa e fácil de usar.</p>
-          <a href="#" class="botao__inscricao">Inscrição Gratuita</a>
+          <a href="#osplanos" class="botao__inscricao">Inscrição Gratuita</a>
         </div>
+
         <div class="banner__info">
           <div class="info__geral">
-            <h2 class="info-num">8K+</h2>
+            <h3 class="info-num">8K+</h3>
             <div class="info-num-org">
-              <div>
-                <p class="info-num-itens">Mapas</p>
-              </div>
-              <div>
-                <p class="info-num-itens">Criativos</p>
-              </div>
+              <p class="info-num-itens">Mapas Criativos</p>
             </div>
           </div>
           <div class="info__geral">
-            <h2 class="info-num">12K+</h2>
+            <h3 class="info-num">12K+</h3>
             <div class="info-num-org">
-              <div>
-                <p class="info-num-itens">Itens</p>
-              </div>
-              <div>
-                <p class="info-num-itens">Criados</p>
-              </div>
+              <p class="info-num-itens">Itens Criados</p>
             </div>
           </div>
           <div class="info__geral">
-            <h2 class="info-num">25K+</h2>
+            <h3 class="info-num">25K+</h3>
             <div class="info-num-org">
-              <div>
-                <p class="info-num-itens">Criaturas</p>
-              </div>
-              <div>
-                <p class="info-num-itens">Geradas</p>
-              </div>
+              <p class="info-num-itens">Criaturas Geradas</p>
             </div>
           </div>
           <div class="info__geral">
-            <h2 class="info-num">430+</h2>
+            <h3 class="info-num">430+</h3>
             <div class="info-num-org">
-              <div>
-                <p class="info-num-itens">Livros</p>
-              </div>
-              <div>
-                <p class="info-num-itens">PDF</p>
-              </div>
+              <p class="info-num-itens">Livros PDF</p>
             </div>
           </div>
         </div>
-        <input type="search" class="pesquisa" placeholder="Busca por tema!" />
+
+        <div class="pesquisa-wrapper">
+          <input
+            type="search"
+            id="busca-tema"
+            class="pesquisa"
+            placeholder="Busca por tema! (ex: cavernas, cidades, itens)"
+            aria-label="Buscar por tema"
+          />
+        </div>
       </div>
     </section>
 
-    <section class="colecao_1">
-      <h2 class="colecao__titulo">Mapas Epicos para todos cenários possíveis. Perfeito para seu Game!</h2>
+    <section id="mapas" class="colecao_1">
+      <h2 class="colecao__titulo">Mapas Épicos para todos os cenários possíveis. Perfeito para seu Game!</h2>
       <div class="colecao__image-1">
-        <div class="mini__box">
-          <img src="/imagens2/Mapas/Battlemaps_1.png" alt="" class="mini__box-img" />
+        <div class="mini__box ativo" data-categoria="batalhas">
+          <img src="imagens2/Mapas/Battlemaps_1.png" alt="Mapas de Batalhas" class="mini__box-img" />
           <p class="mini__box-texto">Batalhas</p>
         </div>
-        <div class="mini__box">
-          <img src="/imagens2/Mapas/Mundo_1.png" alt="" class="mini__box-img" />
+        <div class="mini__box" data-categoria="mundiais">
+          <img src="imagens2/Mapas/Mundo_1.png" alt="Mapas Mundiais" class="mini__box-img" />
           <p class="mini__box-texto">Mundiais</p>
         </div>
-        <div class="mini__box">
-          <img src="/imagens2/Mapas/Cidade_1.png" alt="" class="mini__box-img" />
+        <div class="mini__box" data-categoria="cidades">
+          <img src="imagens2/Mapas/Cidade_1.png" alt="Mapas de Cidades" class="mini__box-img" />
           <p class="mini__box-texto">Cidades</p>
         </div>
-        <div class="mini__box">
-          <img src="/imagens2/Mapas/Regiao_1.png" alt="" class="mini__box-img" />
+        <div class="mini__box" data-categoria="regiões">
+          <img src="imagens2/Mapas/Regiao_1.png" alt="Mapas de Regiões" class="mini__box-img" />
           <p class="mini__box-texto">Regiões</p>
         </div>
-        <div class="mini__box">
-          <img src="/imagens2/Mapas/Cave_1.png" alt="" class="mini__box-img" />
+        <div class="mini__box" data-categoria="cavernas">
+          <img src="imagens2/Mapas/Cave_1.png" alt="Mapas de Cavernas" class="mini__box-img" />
           <p class="mini__box-texto">Cavernas</p>
         </div>
       </div>
+
       <div class="colecao__image-2">
-        <img src="/imagens2/Mapas/Battlemaps_1.png" alt="" />
+        <img src="imagens2/Mapas/Battlemaps_1.png" alt="Prévia do mapa selecionado" />
       </div>
     </section>
 
     <section class="carrossel_1">
       <div class="maps__tag">
-        <p class="maps__tag_p">Batalhas</p>
-        <p class="maps__tag_p">Mundiais</p>
-        <p class="maps__tag_p">Cidades</p>
-        <p class="maps__tag_p">Regiões</p>
-        <p class="maps__tag_p tag-down">Cavernas</p>
+        <p class="maps__tag_p ativo" data-categoria="batalhas">Batalhas</p>
+        <p class="maps__tag_p" data-categoria="mundiais">Mundiais</p>
+        <p class="maps__tag_p" data-categoria="cidades">Cidades</p>
+        <p class="maps__tag_p" data-categoria="regiões">Regiões</p>
+        <p class="maps__tag_p" data-categoria="cavernas">Cavernas</p>
       </div>
 
       <div class="container__carrossel">
         <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide swiper-no-swiping">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_1.png" alt="mapa1" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_2.png" alt="mapa2" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_3.png" alt="mapa3" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_4.png" alt="mapa4" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_5.png" alt="mapa5" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_6.png" alt="mapa6" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_7.png" alt="mapa7" />
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_8.png" alt="mapa8" />
-              </div>
-            </div>
-
-            <div class="swiper-slide swiper-no-swiping">
-              <div class="content">
-                <img src="/imagens2/Mapas/Battlemaps_9.png" alt="mapa9" />
-              </div>
-            </div>
-          </div>
+          <div class="swiper-wrapper"></div>
 
           <ul class="control" id="custom-control">
-            <li class="prev">
-              <img src="imagens2/prev.svg" alt="prev" class="arrow" />
+            <li class="prev" aria-label="Imagem anterior">
+              <img src="imagens2/prev.svg" alt="Anterior" class="arrow" />
             </li>
-            <li class="next">
-              <img src="imagens2/next.svg" alt="next" class="arrow" />
+            <li class="next" aria-label="Próxima imagem">
+              <img src="imagens2/next.svg" alt="Próximo" class="arrow" />
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="colecao_2">
-      <h2 class="colecao__titulo2">Nos lhe ajudamos a libere sua criatividade!</h2>
+    <section id="itens" class="colecao_2">
+      <h2 class="colecao__titulo2">Nós te ajudamos a liberar sua criatividade!</h2>
+
+      <div class="colecao2__tabs" role="tablist" aria-label="Acervo de itens e criaturas">
+        <button type="button" class="colecao2__tab ativo" data-colecao="itens" role="tab" aria-selected="true">Itens</button>
+        <button type="button" class="colecao2__tab" data-colecao="criaturas" role="tab" aria-selected="false">Criaturas</button>
+      </div>
 
       <div id="slider">
         <input type="radio" name="slider" id="slide1" checked />
@@ -225,74 +176,77 @@
         <input type="radio" name="slider" id="slide7" />
         <input type="radio" name="slider" id="slide8" />
         <input type="radio" name="slider" id="slide9" />
+
         <div id="slides">
           <div id="overflow">
             <div class="inner">
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_1.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_1.png" alt="Item de RPG 1" />
                 </div>
               </div>
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_2.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_2.png" alt="Item de RPG 2" />
                 </div>
               </div>
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_3.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_3.png" alt="Item de RPG 3" />
                 </div>
               </div>
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_4.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_4.png" alt="Item de RPG 4" />
                 </div>
               </div>
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_5.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_5.png" alt="Item de RPG 5" />
                 </div>
               </div>
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_6.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_6.png" alt="Item de RPG 6" />
                 </div>
               </div>
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_7.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_7.png" alt="Item de RPG 7" />
                 </div>
               </div>
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_8.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_8.png" alt="Item de RPG 8" />
                 </div>
               </div>
               <div class="slide">
                 <div class="slide-content">
-                  <img src="/imagens2/Itens.criaturas/Itens_9.png" alt="" />
+                  <img src="imagens2/Itens.criaturas/Itens_9.png" alt="Item de RPG 9" />
                 </div>
               </div>
             </div>
             <div class="box-descritivo">
-              <h2 class="titulo-imagem">itens para sua jornada.</h2>
+              <h3 class="titulo-imagem">Itens para sua jornada.</h3>
               <p class="colecao__img-text">
                 Itens essenciais para sua mesa de RPG, ideais para enriquecer suas narrativas e tornar cada sessão ainda mais imersiva.
               </p>
             </div>
           </div>
         </div>
+
         <div id="bullets">
-          <label for="slide1"></label>
-          <label for="slide2"></label>
-          <label for="slide3"></label>
-          <label for="slide4"></label>
-          <label for="slide5"></label>
-          <label for="slide6"></label>
-          <label for="slide7"></label>
-          <label for="slide8"></label>
-          <label for="slide9"></label>
+          <label for="slide1" aria-label="Slide 1"></label>
+          <label for="slide2" aria-label="Slide 2"></label>
+          <label for="slide3" aria-label="Slide 3"></label>
+          <label for="slide4" aria-label="Slide 4"></label>
+          <label for="slide5" aria-label="Slide 5"></label>
+          <label for="slide6" aria-label="Slide 6"></label>
+          <label for="slide7" aria-label="Slide 7"></label>
+          <label for="slide8" aria-label="Slide 8"></label>
+          <label for="slide9" aria-label="Slide 9"></label>
         </div>
+
         <div id="controls">
           <label for="slide1"></label>
           <label for="slide2"></label>
@@ -305,178 +259,185 @@
           <label for="slide9"></label>
         </div>
       </div>
-      <a href="#" class="botao__inscricao">Inscrição Gratuita</a>
+
+      <a href="#osplanos" class="botao__inscricao">Inscrição Gratuita</a>
     </section>
 
     <section class="final bg">
+      <div class="final__bg" aria-hidden="true"></div>
       <h2 class="colecao__titulo2">O que nossos usuários têm a dizer</h2>
 
       <div class="container__box">
         <div class="box_comantario">
-          <img src="/imagens2/comment.svg" class="icon_comentario" alt="ícone" />
-          <p>Otimo para qualquer Mestre de RPG, otimo para ajudar a construir um mundo, recomendo bastante pela versatilidade de conteudos.</p>
+          <img src="imagens2/comment.svg" class="icon_comentario" alt="Ícone de comentário" />
+          <p>Ótimo para qualquer Mestre de RPG! Ajuda demais a construir um mundo completo e recomendo bastante pela versatilidade de conteúdos.</p>
           <p>@<span class="usuario">ZiicoB</span>-232</p>
         </div>
 
         <div class="box_comantario">
-          <img src="/imagens2/comment.svg" class="icon_comentario" alt="ícone" />
-          <p>intuitivo! pode criar uma boa seleção de objetos e criaturas para minha mesa. Muito bom!</p>
+          <img src="imagens2/comment.svg" class="icon_comentario" alt="Ícone de comentário" />
+          <p>Super intuitivo! Consegui criar uma ótima seleção de objetos e criaturas para a minha mesa em poucos minutos. Muito bom!</p>
           <p>@<span class="usuario">Arduino</span>-007</p>
         </div>
 
         <div class="box_comantario">
-          <img src="/imagens2/comment.svg" class="icon_comentario" alt="ícone" />
-
-          <p>Uma ferramentas útil e fácil de usar, gostei basntante!</p>
+          <img src="imagens2/comment.svg" class="icon_comentario" alt="Ícone de comentário" />
+          <p>Uma ferramenta útil e fácil de usar. Os mapas em alta qualidade deixaram nossa campanha muito mais imersiva, gostei bastante!</p>
           <p>@<span class="usuario">Munchkin</span>-33</p>
         </div>
       </div>
 
       <div id="faq" class="box_accordion">
-        <h2 class="titlo_comentario">Perguntas</h2>
+        <h2 class="titlo_comentario">Perguntas Frequentes</h2>
 
         <div class="container_questions">
-          <!--faq-->
           <div class="questions">
             <p>O serviço é pago ou gratuito?</p>
-            <img src="/imagens2/down.svg" alt="icon-abrir" />
+            <img src="imagens2/down.svg" alt="Expandir resposta" />
           </div>
           <div class="resposta">
-            <!--answer-->
             <p>Oferecemos planos gratuitos e pagos, para que você possa começar de graça e fazer upgrade a qualquer momento.</p>
           </div>
         </div>
 
         <div class="container_questions">
-          <!--faq-->
           <div class="questions">
-            <p>oque vocÊs podem oferecer ?</p>
-            <img src="/imagens2/down.svg" alt="icon-abrir" />
+            <p>O que vocês oferecem na plataforma?</p>
+            <img src="imagens2/down.svg" alt="Expandir resposta" />
           </div>
           <div class="resposta">
-            <!--answer-->
             <p>
-              (Texto aleatorio)<br />A criatividade é como uma chama: quanto mais você compartilha, mais ela cresce. Testar novas ideias é a melhor
-              forma de descobrir caminhos inesperados.
+              Você encontra mapas de batalha, mundiais, cidades, regiões e cavernas, além de catálogos de itens, criaturas e materiais de apoio para
+              mestres e jogadores.
             </p>
           </div>
         </div>
 
         <div class="container_questions">
-          <!--faq-->
           <div class="questions">
-            <p>qual a diferença do modo free para o premium ?</p>
-            <img src="/imagens2/down.svg" alt="icon-abrir" />
+            <p>Qual a diferença do modo Free para o Pro?</p>
+            <img src="imagens2/down.svg" alt="Expandir resposta" />
           </div>
           <div class="resposta">
-            <!--answer-->
             <p>
-              (Texto aleatorio)<br />Enquanto navegamos por diferentes mundos de imaginação, percebemos que não são apenas as ferramentas que moldam
-              nossas criações, mas sim a forma como as usamos. Cada detalhe, por menor que pareça, pode transformar algo simples em algo
-              extraordinário. É nesse processo que a verdadeira magia acontece."
+              No plano Free você exporta imagens em HD e organiza até 3 pastas. No plano Pro você desbloqueia resolução 4K, pastas infinitas, criação e
+              edição de itens e importação de mapas.
             </p>
           </div>
         </div>
 
         <div class="container_questions">
-          <!--faq-->
           <div class="questions">
-            <p>O serviço é pago ou gratuito?</p>
-            <img src="/imagens2/down.svg" alt="icon-abrir" />
+            <p>Posso usar os mapas em VTTs como Roll20 e Foundry?</p>
+            <img src="imagens2/down.svg" alt="Expandir resposta" />
           </div>
           <div class="resposta">
-            <!--answer-->
             <p>
-              (Texto aleatorio)<br />Às vezes, as melhores ideias surgem quando menos esperamos. Um simples detalhe pode inspirar uma grande mudança,
-              e aquilo que parecia sem importância se transforma na chave para algo maior. Quando damos espaço para a imaginação, percebemos que os
-              limites são muito mais flexíveis do que imaginávamos..
+              Sim! Todas as imagens exportadas são compatíveis com os principais tabuleiros virtuais (VTTs) e também podem ser impressas para mesas
+              presenciais.
             </p>
           </div>
         </div>
-        <p class="more_faq">Mais Perguntas. (FAQ)</p>
+
+        <a href="contato.html" class="more_faq">Ficou com alguma dúvida? Fale conosco →</a>
       </div>
 
       <div id="osplanos" class="box_planos">
-        <h2 class="titlo_comentario">Comece com nosso plano e suba para nível Pro.</h2>
+        <h2 class="titlo_comentario">Comece com nosso plano e suba para o nível Pro.</h2>
         <div class="escolher-mes-ano">
           <p class="mes">Mensal</p>
           <p class="ano ano-ativo">Anual</p>
         </div>
-        <p class="info-promo">Ganhe <strong>4 meses de graça</strong> com plano anual!</p>
+        <p class="info-promo">Ganhe <strong>4 meses de graça</strong> no plano anual!</p>
 
         <div class="box-planos">
           <div class="planos free">
-            <h2 class="planos-titulo">Plano Free!</h2>
+            <h3 class="planos-titulo">Plano Free!</h3>
             <p class="planos-free">Para sempre</p>
             <div class="box-vantagens">
               <p><strong class="beneficio-free">❱ </strong>Imagens em HD</p>
               <p><strong class="beneficio-free">❱ </strong>Exportar imagem</p>
               <p><strong class="beneficio-free">❱ </strong>Crie até 3 pastas</p>
-              <p><strong class="beneficio-free">❱ </strong>X itens por pastas</p>
+              <p><strong class="beneficio-free">❱ </strong>Até 15 itens por pasta</p>
             </div>
-            <a href="#" class="iniciar-free">Free</a>
+            <a href="contato.html" class="iniciar-free">Começar Free</a>
           </div>
 
           <div class="planos pro">
-            <h2 class="planos-titulo">Plano Pro!</h2>
+            <h3 class="planos-titulo">Plano Pro!</h3>
             <div class="box-valor-pro">
               <p class="valor">R$ 232</p>
               <p class="tempo">/ Ano*</p>
             </div>
             <div class="box-vantagens">
-              <p><strong class="beneficio-pro">❱ </strong>Imagens em 4K/p></p>
+              <p><strong class="beneficio-pro">❱ </strong>Imagens em 4K</p>
               <p><strong class="beneficio-pro">❱ </strong>Exportar imagem</p>
               <p><strong class="beneficio-pro">❱ </strong>Pastas infinitas</p>
               <p><strong class="beneficio-pro">❱ </strong>Criar itens</p>
               <p><strong class="beneficio-pro">❱ </strong>Editar itens</p>
               <p><strong class="beneficio-pro">❱ </strong>Importar mapas</p>
-              <p><strong class="beneficio-pro">❱ </strong>Explore todo conteudo</p>
+              <p><strong class="beneficio-pro">❱ </strong>Explore todo o conteúdo</p>
             </div>
-            <a href="#" class="iniciar-pro">Pró</a>
+            <a href="contato.html" class="iniciar-pro">Assinar Pro</a>
           </div>
         </div>
-        <p class="informacao-fim">*Impostos podem ser aplicados dependendo da sua localização. <br />(Ps: Não existem ofertas reais aqui!)</p>
+        <p class="informacao-fim">*Impostos podem ser aplicados dependendo da sua localização. <br />(Obs.: Projeto demonstrativo sem cobranças reais.)</p>
       </div>
     </section>
 
     <footer class="rodape">
       <div class="redes__sociais">
-        <a href="https://web.facebook.com/" target="_blank"><img src="/imagens2/Facebook.svg" alt="Facebook" class="social" /></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="/imagens2/Instagram.svg" alt="Instagram" class="social" /></a>
-        <a href="https://x.com/" target="_blank"><img src="/imagens2/Twitter.svg" alt="X" class="social" /></a>
-        <a href="https://www.youtube.com/" target="_blank"><img src="/imagens2/Youtube.svg" alt="Youtube" class="social" /></a>
-        <a href="https://discord.com/" target="_blank"><img src="/imagens2/Discord.svg" alt="Discord" class="social" /></a>
+        <a href="https://web.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="imagens2/Facebook.svg" alt="Facebook" class="social" /></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="imagens2/Instagram.svg" alt="Instagram" class="social" /></a>
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img src="imagens2/Twitter.svg" alt="X" class="social" /></a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="imagens2/Youtube.svg" alt="Youtube" class="social" /></a>
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer"><img src="imagens2/Discord.svg" alt="Discord" class="social" /></a>
       </div>
       <div class="more__info">
         <a href="#faq">FAQ</a>
-        <a href="#">Termos de uso</a>
-        <a href="#">privacidade</a>
-        <a href="#">Cookies</a>
+        <a href="#osplanos">Planos</a>
+        <a href="#mapas">Mapas</a>
+        <a href="#itens">Itens &amp; Criaturas</a>
         <a href="contato.html">Contato*</a>
       </div>
     </footer>
 
+    <!-- Modal de Login -->
+    <div id="login-modal" class="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-modal-titulo" hidden>
+      <div class="login-modal__card">
+        <button type="button" id="login-fechar" class="login-modal__fechar" aria-label="Fechar login">&times;</button>
+        <h2 id="login-modal-titulo" class="login-modal__titulo">Entrar</h2>
+        <p class="login-modal__subtitulo">Acesse sua conta no Mundo RPG</p>
+
+        <form id="login-form" class="login-modal__form">
+          <label class="login-modal__campo">
+            <span>Nickname</span>
+            <input type="text" id="login-nickname" name="nickname" placeholder="Seu nickname" autocomplete="username" />
+          </label>
+
+          <label class="login-modal__campo">
+            <span>Senha</span>
+            <div class="login-modal__senha-wrapper">
+              <input type="password" id="login-senha" name="senha" placeholder="Sua senha" autocomplete="current-password" />
+              <button type="button" id="toggle-mostrar-senha" class="login-modal__mostrar-senha" aria-label="Mostrar senha">Mostrar</button>
+            </div>
+          </label>
+
+          <label class="login-modal__salvar">
+            <input type="checkbox" id="login-salvar" name="salvar" />
+            <span>Salvar dados de login</span>
+          </label>
+
+          <button type="submit" class="login-modal__submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/js/script_swiper.js"></script>
-    <script src="/js/script_carrossel.js"></script>
-    <script src="/js/script_carrossel2.js"></script>
-    <script src="/js/faq.js"></script>
-    <script src="/js/mes_ano.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/script_swiper.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/mes_ano.js"></script>
   </body>
 </html>
-
-<!--
-  <body>
-    <header> 
-        <nav></nav> 
-    </header>
-    <main>
-        <section> </section>
-        <div> </div>
-        <article> </article> 
-        <aside> </aside>
-    </main>
-    <footer>   
-    </footer>
-  </body>
-    -->

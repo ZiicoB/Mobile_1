@@ -1,10 +1,14 @@
 .banner {
   color: var(--text-color);
-  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/imagens2/fantasy/bau.png");
+  background:
+    linear-gradient(180deg, rgba(5, 24, 36, 0.78) 0%, rgba(5, 24, 36, 0.56) 55%, #000000 100%),
+    url("../../imagens2/fantasy/bau.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 .container__texto_banner {
@@ -12,108 +16,151 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  margin-top: 5em;
-  padding: 1.5em;
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 6.5em 1.5em 4em;
 }
 
 .banner__texto {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 720px;
 }
 
 .titulo_topo {
   font-family: var(--font-family);
-  font-size: var(--texto-font-48);
-  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.12;
   text-align: center;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
+
 .descricao_top {
   font-family: var(--font-family);
-  font-size: var(--texto-font-20);
-  font-weight: 600;
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: #e6eef5;
   text-align: center;
   margin: 1em 0 0 0;
+  max-width: 580px;
 }
 
 .botao__inscricao {
   color: var(--background-color);
   font-family: var(--font-family);
-  font-size: var(--texto-font-20);
-  font-weight: 600;
+  font-size: var(--texto-font-18);
+  font-weight: 700;
   background-color: var(--secondary-color);
-  box-shadow: 0px 0px 10px 4px rgba(1, 102, 255, 0.329);
+  box-shadow: 0 6px 24px rgba(50, 224, 143, 0.35);
   text-decoration: none;
   cursor: pointer;
-  border-radius: 2px;
-
-  margin: 3em 0 0 0;
-  padding: 0.7em 1.3em;
+  border-radius: 6px;
+  margin: 2.2em 0 0 0;
+  padding: 0.8em 1.8em;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .botao__inscricao:hover {
   background-color: var(--secondary-color-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(50, 224, 196, 0.45);
 }
 
 .banner__info {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(135px, 1fr));
   gap: 1em;
   margin-top: 2.5em;
-  justify-content: center;
+  width: 100%;
+  max-width: 520px;
 }
 
 .info__geral {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: transparent;
-  background-color: rgba(0, 0, 0, 0.445);
-  backdrop-filter: blur(5px);
-  padding: 1.5em 1em;
-  flex: 1 1 200px; /* permite ajuste automático */
-  max-width: 250px; /* limite do tamanho */
+  justify-content: center;
+  background-color: rgba(5, 16, 26, 0.62);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 1.25em 1em;
   text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
+
+.info__geral:hover {
+  transform: translateY(-2px);
+  border-color: rgba(50, 224, 143, 0.45);
+}
+
 .info-num {
-  font-size: var(--texto-font-24);
+  font-size: var(--texto-font-28);
   font-family: var(--font-family);
-  font-weight: bold;
-  font-weight: bold;
+  font-weight: 700;
+  color: var(--secondary-color);
 }
 
 .info-num-org {
   display: flex;
-  gap: 0.4em;
+  gap: 0.35em;
+  margin-top: 0.35em;
 }
 
 .info-num-itens {
-  font-size: var(--texto-font-16);
+  font-size: var(--texto-font-14);
   font-family: var(--font-family);
-  font-weight: bold;
-  padding: 0.3em 0;
+  font-weight: 600;
+  color: #e6eef5;
+}
+
+.pesquisa-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin-top: 2.5em;
 }
 
 .pesquisa {
-  background-color: rgba(0, 0, 0, 0.459);
-  backdrop-filter: blur(5px);
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 8px;
-  margin-top: 3em;
-  padding: 0.6em 0 0.6em 1.7em;
-  width: 300px;
+  width: 100%;
+  background-color: rgba(5, 16, 26, 0.72);
+  background-image: url("../../imagens2/Lupa.svg");
+  background-repeat: no-repeat;
+  background-position: 1em center;
+  background-size: 16px 16px;
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  padding: 0.85em 1.25em 0.85em 2.8em;
   font-family: var(--font-family);
-  font-size: var(--texto-font-13);
+  font-size: var(--texto-font-14);
   color: var(--text-color);
   font-weight: 400;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+.pesquisa:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(50, 224, 143, 0.2);
+}
+
 .pesquisa::placeholder {
   font-family: var(--font-family);
-  font-size: var(--texto-font-13);
-  color: var(--text-color);
+  font-size: var(--texto-font-14);
+  color: rgba(255, 255, 255, 0.75);
   font-weight: 400;
-  text-align: center;
-  background: url(/imagens2/Lupa.svg) no-repeat;
-  background-position: 3em;
+}
+
+@media screen and (min-width: 768px) {
+  .banner__info {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 760px;
+    gap: 1.25em;
+  }
 }

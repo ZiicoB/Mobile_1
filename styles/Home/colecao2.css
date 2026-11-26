@@ -4,46 +4,92 @@
   justify-content: center;
   align-items: center;
   color: var(--text-color);
-  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("/imagens2/fantasy/fundo_meio.jpg");
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(5, 24, 36, 0.55) 50%, #000000 100%),
+    url("../../imagens2/fantasy/fundo_meio.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 80vh;
+  padding: 3em 1em;
 }
 
 .colecao__titulo2 {
   font-family: var(--font-family);
-  font-size: var(--texto-font-24);
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
   font-weight: 600;
+  line-height: 1.3;
   text-align: center;
-  margin: 2em 1em;
+  max-width: 720px;
+  margin: 0.5em auto 1.25em;
   padding: 0 0.5em;
 }
 
-/* inicio */
+.colecao2__tabs {
+  display: flex;
+  gap: 0.75em;
+  margin-bottom: 1.5em;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 0.35em;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.colecao2__tab {
+  font-family: var(--font-family);
+  font-size: var(--texto-font-14);
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5em 1.4em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.colecao2__tab:hover {
+  color: var(--text-color);
+}
+
+.colecao2__tab.ativo {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+/* Slider */
 #slider {
-  margin: 0 3em;
-  padding: 5px;
-  width: 22em;
-  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  width: min(92vw, 440px);
   text-align: center;
 }
+
 #slider input[type="radio"] {
   display: none;
 }
+
 #slider label {
   cursor: pointer;
   text-decoration: none;
 }
+
 #slides {
-  width: 95%;
-  padding: 10px;
-  background: #00000091;
+  width: 100%;
+  padding: 14px;
+  background: rgba(5, 16, 26, 0.78);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.55);
 }
+
 #overflow {
   width: 100%;
   overflow: hidden;
+  border-radius: 8px;
 }
+
 #slide1:checked ~ #slides .inner {
   margin-left: 0;
 }
@@ -71,70 +117,87 @@
 #slide9:checked ~ #slides .inner {
   margin-left: -800%;
 }
+
 #slides .inner {
-  transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: margin-left 650ms cubic-bezier(0.77, 0, 0.175, 1);
   width: 900%;
+  display: flex;
   line-height: 0;
 }
+
 #slides .slide {
-  width: 11.111%;
-  float: left;
+  width: 11.1111%;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  color: #000000;
+}
+
+.slide-content {
+  width: 100%;
 }
 
 .slide-content img {
   width: 100%;
-  border-radius: 5px;
-  margin-top: 0.1em;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
 
-/* Texto dos itens*/
+/* Texto dos itens */
 #slider .box-descritivo {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
-  margin: 0.6em auto;
-  padding: 0.2em 0.2em;
-  gap: 0.5em;
+  align-items: flex-start;
+  margin-top: 0.9em;
+  padding: 0.25em 0.35em;
+  gap: 0.45em;
 }
 
 .titulo-imagem {
   font-family: var(--font-family);
   font-size: var(--texto-font-20);
   font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-color);
 }
 
 .colecao__img-text {
   font-family: var(--font-family);
-  font-size: var(--texto-font-13);
+  font-size: var(--texto-font-14);
   font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-muted);
   text-align: start;
 }
 
-/* Setas e Bullets*/
-
+/* Setas e Bullets */
 #controls {
-  margin: 10px auto;
+  margin: 0.75em auto 0;
   width: 100%;
-  height: 33px;
+  height: 36px;
   z-index: 1;
   position: relative;
 }
+
 #controls label {
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease, transform 0.2s ease;
   display: none;
   width: 34px;
-  height: 30px;
-  opacity: 0.5;
+  height: 34px;
+  opacity: 0.7;
+  background-position: center !important;
+  background-size: 24px 24px !important;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 #controls label:hover {
   opacity: 1;
+  transform: scale(1.08);
 }
+
 #slide1:checked ~ #controls label:nth-child(2),
 #slide2:checked ~ #controls label:nth-child(3),
 #slide3:checked ~ #controls label:nth-child(4),
@@ -144,11 +207,12 @@
 #slide7:checked ~ #controls label:nth-child(8),
 #slide8:checked ~ #controls label:nth-child(9),
 #slide9:checked ~ #controls label:nth-child(1) {
-  background: url(/imagens2/next.svg) no-repeat;
+  background: rgba(255, 255, 255, 0.1) url("../../imagens2/next.svg") no-repeat center;
   float: right;
-  margin: 0 10px 0 0;
+  margin: 0 8px 0 0;
   display: block;
 }
+
 #slide1:checked ~ #controls label:nth-child(9),
 #slide2:checked ~ #controls label:nth-child(1),
 #slide3:checked ~ #controls label:nth-child(2),
@@ -158,24 +222,29 @@
 #slide7:checked ~ #controls label:nth-child(6),
 #slide8:checked ~ #controls label:nth-child(7),
 #slide9:checked ~ #controls label:nth-child(8) {
-  background: url(/imagens2/prev.svg) no-repeat;
+  background: rgba(255, 255, 255, 0.1) url("../../imagens2/prev.svg") no-repeat center;
   float: left;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 8px;
   display: block;
 }
 
 #bullets {
-  margin: 6px 5px;
-  text-align: center;
+  margin: 14px 0 4px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
 #bullets label {
   display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  background: #0077ff;
-  margin: 0 10px;
+  background: rgba(52, 152, 219, 0.55);
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
+
 #slide1:checked ~ #bullets label:nth-child(1),
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3),
@@ -185,20 +254,10 @@
 #slide7:checked ~ #bullets label:nth-child(7),
 #slide8:checked ~ #bullets label:nth-child(8),
 #slide9:checked ~ #bullets label:nth-child(9) {
-  background: #ffffff;
+  background: var(--secondary-color);
+  transform: scale(1.25);
 }
 
-.botao__inscricao {
-  color: var(--background-color);
-  font-family: var(--font-family);
-  font-size: var(--texto-font-20);
-  font-weight: 600;
-  background-color: var(--secondary-color);
-  box-shadow: 0px 0px 10px 4px rgba(1, 102, 255, 0.329);
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 2px;
-
-  margin: 2em;
-  padding: 0.7em 1.3em;
+.colecao_2 .botao__inscricao {
+  margin: 2em 0 0.5em;
 }

@@ -1,7 +1,15 @@
 const faqs = document.querySelectorAll(".container_questions");
 
-faqs.forEach((container_questions) => {
-  container_questions.addEventListener("click", () => {
-    container_questions.classList.toggle("active");
+faqs.forEach((container) => {
+  container.addEventListener("click", () => {
+    const estavaAtivo = container.classList.contains("active");
+
+    faqs.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    if (!estavaAtivo) {
+      container.classList.add("active");
+    }
   });
 });

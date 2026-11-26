@@ -1,79 +1,98 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RPG Maps</title>
+    <title>Contato — Mundo RPG</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/responsive.css" />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link rel="stylesheet" href="/styles/contato.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
-    <!-- TOPO / HEADER -->
-    <section class="container__topo">
-      <header class="cabecalho">
-        <div class="container__logo">
-          <a href="index.html">
-            <img src="/imagens2/logo.svg" alt="logo" class="logo" />
-            <h1>Mundo RPG</h1>
-          </a>
-        </div>
+    <header class="cabecalho">
+      <div class="container__logo">
+        <a href="index.html">
+          <img src="imagens2/logo.svg" alt="Logo Mundo RPG" class="logo" />
+          <h1>Mundo RPG</h1>
+        </a>
+      </div>
 
-        <div class="container">
-          <a href="#"><img src="/imagens2/Usuário.svg" alt="usuario" class="cont__imagem_cab" /></a>
-          <a href="#"><img src="/imagens2/Favoritos.svg" alt="favoritos" class="cont__imagem_cab" /></a>
-          <a href="#osplanos"><img src="/imagens2/Compras.svg" alt="comprar" class="cont__imagem_cab" /></a>
+      <ul class="opcoes">
+        <li class="opcoes__item"><a href="index.html#mapas" class="opcoes__link">Mapas</a></li>
+        <li class="opcoes__item"><a href="index.html#itens" class="opcoes__link">Itens</a></li>
+        <li class="opcoes__item"><a href="index.html#osplanos" class="opcoes__link">Planos</a></li>
+        <li class="opcoes__item"><a href="index.html#faq" class="opcoes__link">FAQ</a></li>
+        <li class="opcoes__item"><a href="contato.html" class="opcoes__link opcoes__link--ativo">Contato</a></li>
+      </ul>
 
-          <input type="checkbox" id="menu" class="container__botao" />
-          <label for="menu">
-            <span class="cabecalho_menu-hamburguer"></span>
-          </label>
+      <div class="cont__imagem">
+        <button type="button" id="btn-abrir-login" class="header-icon-action btn-login-trigger" aria-label="Fazer login" title="Fazer login">
+          <img src="imagens2/Usuário.svg" alt="Login" class="cont__imagem_cab" />
+        </button>
+        <button type="button" id="btn-favoritos" class="header-icon-action btn-favoritos" aria-label="Favoritos" title="Favoritos">
+          <img src="imagens2/Favoritos.svg" alt="Favoritos" class="cont__imagem_cab" />
+        </button>
+        <a href="index.html#osplanos" class="header-icon-action" aria-label="Nossos planos" title="Nossos planos">
+          <img src="imagens2/Compras.svg" alt="Planos" class="cont__imagem_cab" />
+        </a>
 
-          <ul class="lista-menu">
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">PERFIL</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">FAVORITOS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">NOSSOS PLANOS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__categorias">=== CATEGORIAS RPG ===</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">ITENS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">MAPAS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">LIVROS</a></li>
-            <li class="lista-menu__item"><a href="#" class="lista-menu__links">CRIATURAS</a></li>
-          </ul>
-        </div>
-      </header>
-    </section>
+        <input type="checkbox" id="menu" class="container__botao" />
+        <label for="menu" aria-label="Abrir menu">
+          <span class="cabecalho_menu-hamburguer"></span>
+        </label>
 
-    <!-- LOGIN -->
+        <ul class="lista-menu">
+          <li class="lista-menu__item">
+            <button type="button" class="lista-menu__links lista-menu__btn-login">LOGIN</button>
+          </li>
+          <li class="lista-menu__item"><a href="contato.html" class="lista-menu__links">CONTATO</a></li>
+          <li class="lista-menu__item"><a href="index.html#osplanos" class="lista-menu__links">NOSSOS PLANOS</a></li>
+          <li class="lista-menu__item"><span class="lista-menu__categorias">| CATEGORIAS RPG |</span></li>
+          <li class="lista-menu__item"><a href="index.html#mapas" class="lista-menu__links">MAPAS</a></li>
+          <li class="lista-menu__item"><a href="index.html#itens" class="lista-menu__links">ITENS &amp; CRIATURAS</a></li>
+          <li class="lista-menu__item"><a href="index.html#faq" class="lista-menu__links">FAQ</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- CONTATO -->
     <section class="container__contato">
       <div class="card__contato">
         <div class="painel__esquerdo">
           <h2>Obrigado pelo contato!</h2>
-          <p>Prometemos dar um retorno o mais rápido possível. Enquanto isso, que tal dar uma olhada em nossas redes sociais?</p>
-          <button class="btn__outline">Login</button>
-
-          <a href="#" class="link__forgot">Perdeu a senha?</a>
+          <p>Prometemos dar um retorno o mais rápido possível. Enquanto isso, que tal explorar nossos mapas ou conferir nossas redes sociais?</p>
+          <a href="index.html" class="btn__outline">Voltar para Home</a>
 
           <div class="social__icons">
-            <span>F</span>
-            <span>in</span>
-            <span>X</span>
-            <span>D</span>
+            <a href="https://web.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <img src="imagens2/Facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="imagens2/Instagram.svg" alt="Instagram" />
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X">
+              <img src="imagens2/Twitter.svg" alt="X" />
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Youtube">
+              <img src="imagens2/Youtube.svg" alt="Youtube" />
+            </a>
+            <a href="https://discord.com/" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+              <img src="imagens2/Discord.svg" alt="Discord" />
+            </a>
           </div>
         </div>
 
         <div class="painel__direito">
           <h2>Contato</h2>
 
-          <form action="" id="forms" method="getup">
-            <input type="text" id="name" placeholder="Username" required />
-            <input type="email" id="email" placeholder="Email" required />
+          <form id="forms" novalidate>
+            <input type="text" id="name" placeholder="Seu nome ou Username" required />
+            <input type="email" id="email" placeholder="seu@email.com" required />
+
             <div class="box-datatel">
               <div>
-                <label for="birthDate">Aniverario</label>
+                <label for="nascimento">Aniversário</label>
                 <input type="date" id="nascimento" />
               </div>
               <div>
@@ -88,9 +107,11 @@
             </div>
 
             <div class="box_upload">
-              <label for="userImage">Arquivo</label>
+              <label for="upload">Anexar imagem (opcional)</label>
               <input type="file" id="upload" accept="image/*" name="userImage" />
             </div>
+
+            <div id="form-feedback" class="form__feedback" role="status" aria-live="polite"></div>
 
             <button type="submit" class="btn__submit">Enviar</button>
           </form>
@@ -101,35 +122,67 @@
     <!-- FOOTER -->
     <footer class="rodape">
       <div class="redes__sociais">
-        <a href="https://web.facebook.com/" target="_blank">
-          <img src="/imagens2/Facebook.svg" alt="Facebook" class="social" />
+        <a href="https://web.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <img src="imagens2/Facebook.svg" alt="Facebook" class="social" />
         </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          <img src="/imagens2/Instagram.svg" alt="Instagram" class="social" />
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <img src="imagens2/Instagram.svg" alt="Instagram" class="social" />
         </a>
-        <a href="https://x.com/" target="_blank">
-          <img src="/imagens2/Twitter.svg" alt="X" class="social" />
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+          <img src="imagens2/Twitter.svg" alt="X" class="social" />
         </a>
-        <a href="https://www.youtube.com/" target="_blank">
-          <img src="/imagens2/Youtube.svg" alt="Youtube" class="social" />
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+          <img src="imagens2/Youtube.svg" alt="Youtube" class="social" />
         </a>
-        <a href="https://discord.com/" target="_blank">
-          <img src="/imagens2/Discord.svg" alt="Discord" class="social" />
+        <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">
+          <img src="imagens2/Discord.svg" alt="Discord" class="social" />
         </a>
       </div>
 
       <div class="more__info">
-        <a href="#faq">FAQ</a>
-        <a href="#">Termos de uso</a>
-        <a href="#">Privacidade</a>
-        <a href="#">Cookies</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#osplanos">Planos</a>
+        <a href="index.html#mapas">Mapas</a>
+        <a href="index.html#itens">Itens &amp; Criaturas</a>
         <a href="contato.html">Contato*</a>
       </div>
     </footer>
 
+    <!-- Modal de Login -->
+    <div id="login-modal" class="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-modal-titulo" hidden>
+      <div class="login-modal__card">
+        <button type="button" id="login-fechar" class="login-modal__fechar" aria-label="Fechar login">&times;</button>
+        <h2 id="login-modal-titulo" class="login-modal__titulo">Entrar</h2>
+        <p class="login-modal__subtitulo">Acesse sua conta no Mundo RPG</p>
+
+        <form id="login-form" class="login-modal__form">
+          <label class="login-modal__campo">
+            <span>Nickname</span>
+            <input type="text" id="login-nickname" name="nickname" placeholder="Seu nickname" autocomplete="username" />
+          </label>
+
+          <label class="login-modal__campo">
+            <span>Senha</span>
+            <div class="login-modal__senha-wrapper">
+              <input type="password" id="login-senha" name="senha" placeholder="Sua senha" autocomplete="current-password" />
+              <button type="button" id="toggle-mostrar-senha" class="login-modal__mostrar-senha" aria-label="Mostrar senha">Mostrar</button>
+            </div>
+          </label>
+
+          <label class="login-modal__salvar">
+            <input type="checkbox" id="login-salvar" name="salvar" />
+            <span>Salvar dados de login</span>
+          </label>
+
+          <button type="submit" class="login-modal__submit">Entrar</button>
+        </form>
+      </div>
+    </div>
+
     <!-- JS -->
-    <script src="/js/contato/contato.js"></script>
-    <script src="/js/contato/contato_tel.js"></script>
-    <script src="/js/contato/mensagens.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/contato/contato_tel.js"></script>
+    <script src="js/contato/mensagens.js"></script>
+    <script src="js/contato/contato.js"></script>
   </body>
 </html>
