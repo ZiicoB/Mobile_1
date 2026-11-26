@@ -6,7 +6,7 @@
 
 ## 🇧🇷 Português
 
-Template responsivo de landing page e página de contato para uma plataforma fictícia de recursos de RPG (mapas, itens, criaturas e planos).
+Template responsivo para um site voltado para criação de recursos de RPG (mapas, itens, criaturas e planos). Apenas a página inicial e a de contato foram feitas, além de uma pequena janela modelo para fazer login.
 
 ### Principais recursos
 
@@ -29,7 +29,7 @@ HTML5 • CSS3 • JavaScript • Swiper 11
 
 ## 🇺🇸 English
 
-Responsive landing page and contact page template for a fictional tabletop RPG assets platform (maps, items, creatures, and plans).
+Responsive template for a website focused on creating RPG assets (maps, items, creatures, and plans). Only the home and contact pages were built, along with a small modal window for login.
 
 ### Key features
 
